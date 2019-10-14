@@ -1,0 +1,44 @@
+{
+  "name": "express-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=develop nodemon",
+    "start-server": "cross-env NODE_ENV=test nodemon",
+    "test": "jest --forceExit -i --detectOpenHandles",
+    "coverage": "jest --coverage --detectOpenHandles",
+    "ci": "start-server-and-test start-server http://localhost:3002 test",
+    "ci-coverage": "start-server-and-test start-server http://localhost:3002 coverage"
+  },
+  "keywords": [
+    "express",
+    "javascript",
+    "nodejs",
+    "boilerplate",
+    "bulletproof"
+  ],
+  "author": "Francisco Suárez",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.2.3",
+    "cross-env": "^6.0.3",
+    "express": "^4.17.1",
+    "express-pino-logger": "^4.0.0",
+    "helmet": "^3.21.1",
+    "pino": "^5.13.4",
+    "swagger-jsdoc": "^3.4.0",
+    "swagger-ui-express": "^4.1.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-plugin-node": "^10.0.0",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "nodemon": "^1.19.3",
+    "start-server-and-test": "^1.10.5",
+    "supertest": "^4.0.2"
+  }
+}
